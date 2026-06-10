@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rediant SMP</title><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Press Start 2P', cursive;
+    min-height:100vh;
+    color:white;
+    overflow-x:hidden;
+    background:
+    radial-gradient(circle at top,#ff7b00 0%,#111 35%,#000 100%);
+    position:relative;
+}
+
+/* Animated Orange Lightning Glow */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 15% 20%,rgba(255,120,0,.35),transparent 25%),
+    radial-gradient(circle at 85% 25%,rgba(255,120,0,.25),transparent 20%),
+    radial-gradient(circle at 50% 80%,rgba(255,120,0,.30),transparent 30%);
+    filter:blur(100px);
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    repeating-linear-gradient(
+      120deg,
+      transparent 0px,
+      transparent 200px,
+      rgba(255,140,0,.06) 205px,
+      transparent 210px
+    );
+    z-index:-1;
+}
+
+/* Floating Minecraft Items */
+.bg-items{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.bg-items img{
+    position:absolute;
+    width:90px;
+    opacity:.28;
+    filter:
+    drop-shadow(0 0 10px orange)
+    drop-shadow(0 0 30px orange);
+    animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0px);}
+    50%{transform:translateY(-20px);}
+}
+
+.i1{top:5%;left:5%;}
+.i2{top:10%;left:80%;}
+.i3{top:35%;left:10%;}
+.i4{top:30%;left:85%;}
+.i5{top:65%;left:5%;}
+.i6{top:70%;left:80%;}
+.i7{top:85%;left:40%;}
+.i8{top:15%;left:45%;}
+
+header{
+    text-align:center;
+    padding:60px 20px 20px;
+}
+
+.logo{
+    font-size:48px;
+    font-weight:bold;
+}
+
+.smp{
+    display:block;
+    margin-top:18px;
+    color:#ff7b00;
+    text-shadow:
+    0 0 10px #ff7b00,
+    0 0 20px #ff7b00,
+    0 0 40px #ff7b00,
+    0 0 70px #ff5500;
+}
+
+.subtitle{
+    margin-top:25px;
+    font-size:12px;
+    color:#ddd;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:rgba(15,15,15,.85);
+    border:2px solid #ff7b00;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:
+    0 0 20px rgba(255,123,0,.4),
+    0 0 60px rgba(255,123,0,.15);
+    backdrop-filter:blur(10px);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:25px;
+    color:#ff9a33;
+}
+
+.info-grid{
+    display:grid;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.info{
+    background:#181818;
+    border:1px solid #ff7b00;
+    padding:18px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.warning{
+    background:#111;
+    border-left:6px solid #ff7b00;
+    padding:20px;
+    line-height:1.8;
+    font-size:10px;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+button{
+    font-family:'Press Start 2P', cursive;
+    border:none;
+    cursor:pointer;
+}
+
+.main-btn{
+    background:linear-gradient(135deg,#ff7b00,#ff5500);
+    color:white;
+    padding:18px;
+    border-radius:12px;
+    transition:.25s;
+}
+
+.main-btn:hover{
+    transform:scale(1.03);
+}
+
+.discord-btn{
+    background:#5865F2;
+    color:white;
+    padding:18px;
+    border-radius:12px;
+}
+
+.msg{
+    display:none;
+    margin-top:15px;
+    color:#7cff7c;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    font-size:10px;
+    color:#bbb;
+}
+
+@media(max-width:768px){
+    .logo{
+        font-size:30px;
+    }
+
+    .card{
+        padding:20px;
+    }
+}
+</style></head>
+<body><div class="bg-items">
+<img class="i1" src="https://minecraft.wiki/images/Diamond_Sword_JE2_BE2.png">
+<img class="i2" src="https://minecraft.wiki/images/Diamond_Pickaxe_JE2_BE2.png">
+<img class="i3" src="https://minecraft.wiki/images/Diamond_Sword_JE2_BE2.png">
+<img class="i4" src="https://minecraft.wiki/images/Diamond_Pickaxe_JE2_BE2.png">
+<img class="i5" src="https://minecraft.wiki/images/Diamond_Sword_JE2_BE2.png">
+<img class="i6" src="https://minecraft.wiki/images/Diamond_Pickaxe_JE2_BE2.png">
+<img class="i7" src="https://minecraft.wiki/images/Diamond_Sword_JE2_BE2.png">
+<img class="i8" src="https://minecraft.wiki/images/Diamond_Pickaxe_JE2_BE2.png">
+</div><header>
+    <div class="logo">
+        Rediant
+        <span class="smp">SMP</span>
+    </div><div class="subtitle">
+    Premium Minecraft Bedrock Survival Experience
+</div>
+
+</header><div class="container"><div class="card"><h2 class="section-title">SERVER INFORMATION</h2><div class="info-grid">
+    <div class="info">IP: rediant.aternos.me</div>
+    <div class="info">PORT: 37474</div>
+    <div class="info">Edition: Bedrock</div>
+</div><div class="warning">
+    Follow the rules and respect every player.<br><br>Griefing, stealing, trapping, hacking, destroying builds,
+killing pets, or intentionally ruining the experience of
+other players may result in a permanent ban.
+
+</div><div class="buttons"><button class="main-btn" onclick="copyIP()">
+COPY SERVER IP
+</button><button class="main-btn" onclick="copyPort()">
+COPY PORT
+</button><button class="main-btn" onclick="addToMinecraft()">
+ADD TO MINECRAFT
+</button><a href="https://discord.gg/As5ywFPYwP" target="_blank">
+<button class="discord-btn">
+JOIN DISCORD
+</button>
+</a></div><div class="msg" id="msg">
+✔ Copied Successfully
+</div></div></div><footer>
+Rediant SMP • Owner: TrideepYo
+</footer><script>
+const msg = document.getElementById("msg");
+
+function showMsg(){
+    msg.style.display="block";
+    setTimeout(()=>{
+        msg.style.display="none";
+    },1500);
+}
+
+function copyIP(){
+    navigator.clipboard.writeText("rediant.aternos.me");
+    showMsg();
+}
+
+function copyPort(){
+    navigator.clipboard.writeText("37474");
+    showMsg();
+}
+
+function addToMinecraft(){
+    window.location.href =
+    "minecraft://?addExternalServer=Rediant SMP|rediant.aternos.me:37474";
+}
+</script></body>
+</html>
